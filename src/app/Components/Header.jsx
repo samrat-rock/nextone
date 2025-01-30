@@ -1,31 +1,32 @@
-import Link from 'next/link'
-import React from 'react'
-import { Button } from 'antd';
+// src/components/Header.js
+import Link from 'next/link';
+import React from 'react';
+import { Button, Row, Col } from 'antd';
 
 function Header() {
   return (
-
     <div>
-    <header className="bg-red-500 py-3">
-        <div className="container mx-auto">
-          <h1 className="text-3xl">LOGO</h1>
+      <header>
+        <div>
+          <h1>LOGO</h1>
         </div>
-  
       </header>
-      <nav className="bg-green-400 py-3 text-white">
-
-<ul  className="flex gap-5 justify-center">
-<li><Link href="/">Home</Link>
-<Button type="primary">Button</Button>
- </li>
-
-<li><Link href="/About-us">About us</Link> </li>
-<li><Link href="/Services">Services</Link> </li>
-
-</ul>
+      <nav>
+        <Row justify="space-around" align="middle">
+          <Col>
+            <Link href="/">
+              <Button type="primary">Home</Button>
+            </Link>
+          </Col>
+          <Col>
+            <Link href="/AboutUs">
+              <Button type="primary">About US</Button>
+            </Link>
+          </Col>
+        </Row>
       </nav>
-  </div>
-  )
+    </div>
+  );
 }
 
-export default Header
+export default Header;
